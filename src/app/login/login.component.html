@@ -1,0 +1,38 @@
+<div *ngIf="data.type=='login'" class="dialog">
+    <mat-tab-group>
+        <mat-tab label="As Student">             
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="UID" [(ngModel)]="usr">
+            </mat-form-field><br>
+            
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="Password"  type="password" [(ngModel)]="pwd">
+            </mat-form-field><br>
+            <button class="login" mat-raised-button color="primary" (click)="login('student')">LogIn</button>                                
+        </mat-tab>
+        <mat-tab label="As a Professor">             
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="TID" [(ngModel)]="usr">
+            </mat-form-field><br>
+            
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="Password"  type="password" [(ngModel)]="pwd">
+            </mat-form-field><br>
+            <button class="login" mat-raised-button color="primary" (click)="login('teacher')">LogIn</button>            
+        </mat-tab>        
+    </mat-tab-group>      
+</div>
+<div *ngIf="data.type=='signup'" class="dialog">
+    <mat-tab-group>
+        <mat-tab label="As Student">             
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="UID" [(ngModel)]="usr">
+            </mat-form-field><br>
+            
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="Password"  type="password" [(ngModel)]="pwd">
+            </mat-form-field><br>
+            <button class="login" mat-raised-button color="primary" (click)="signup('student')">SignUp</button>                    
+        </mat-tab>              
+    </mat-tab-group>      
+</div>
